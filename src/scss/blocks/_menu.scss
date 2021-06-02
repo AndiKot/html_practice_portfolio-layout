@@ -58,6 +58,7 @@
     &__item {
         position: relative;
         display: block;
+        margin-bottom: 15px;
         &::before {
             content: "";
             position: absolute;

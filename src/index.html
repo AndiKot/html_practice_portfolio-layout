@@ -121,7 +121,18 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/me.jpg" alt="me">
+                    <!-- <img srcset="img/me-min.jpg 300w, 
+                    img/me.jpg 400w" sizes="(max-width: 576px) 280px,
+                    (min-width: 577px) 400px" src="img/me.jpg" alt="me"> -->
+                    <!-- <picture>
+                        <source media="(max-width: 576px)" srcset="img/me-min.jpg">
+                        <source media="(min-width: 577px)" srcset="img/me.jpg">
+                        <img src="img/me.jpg" alt="me">
+                    </picture> -->
+                    <picture>
+                        <source type="image/webp" srcset="img/me.webp">
+                        <img src="img/me.jpg" alt="me">
+                    </picture>
                 </div>
                 <div class="about__description">
                     <h2 class="title title_fz16 about__title">Про меня</h2>
@@ -278,7 +289,6 @@
             <h2 class="title title_fz16 skills__title">Навыки</h2>
             <div class="title title_fz36 skills__subtitle">Что я использую в работе</div>
             <div class="divider"></div>
-            <!-- SKILLS Items -->
             <div class="skills__items">
                 <div class="skills__item">
                     <img src="img/icons/html5.svg" alt="HTML5">
@@ -335,7 +345,6 @@
                     </div>
                 </div>
             </div>
-            <!-- SKILLS Progress -->
             <div class="skills__progress">
                 <div class="skills__progress-item">
                     <div class="skills__progress-head">
@@ -488,22 +497,52 @@
 
     <section class="contacts">
         <div class="container">
-            <img src="img/me.jpg" alt="me">
-            <div class="contacts__form">
-                <h2 class="title title_fz16 contacts__title">Контакты</h2>
-                <div class="title title_fz36 contacts__subtitle">Свяжитесь со мной</div>
-                <div class="divider"></div>
-                <div class="contacts__social">
-                    <p>Любым удобным для вас способом:</p>
-                    <img src="img/icons/facebook-3.svg" alt="facebook">
-                    <img src="img/icons/telegram.svg" alt="telegram">
-                    <img src="img/icons/Instagram-3.svg" alt="instagram">
+            <div class="contacts__wrapper">
+                <div class="contacts__photo">
+                    <img src="img/me.jpg" alt="me">
                 </div>
-                <div class="contacts__form">
-                    <input type="text" name="name" id="name" placeholder="Андрей">
-                    <input type="email" name="email" id="email">
-                    <textarea name="text" id="text" cols="50" rows="10"></textarea>
-                    <button type="submit"></button>
+                <div class="contacts__head">
+                    <h2 class="title title_fz16 contacts__title">Контакты</h2>
+                    <div class="title title_fz36 contacts__subtitle">Свяжитесь со мной</div>
+                    <div class="divider"></div>
+                    <h3 class="title title_fz14 contacts__social-title">Любым удобным для вас способом:</h3>
+                    <div class="contacts__social">
+                        <a href="#" class="contacts__link">
+                            <img src="img/icons/facebook-3.svg" alt="facebook">
+                        </a>
+                        <a href="#" class="contacts__link">
+                            <img src="img/icons/telegram.svg" alt="telegram">
+                        </a>
+                        <a href="#" class="contacts__link">
+                            <img src="img/icons/Instagram-3.svg" alt="instagram">
+                        </a>
+                    </div>
+                    <h3 class="title title_fz14 contacts__form-title">Или оставьте ваши данные и я сама вам напишу:
+                    </h3>
+                    <div class="contacts__form">
+                        <form action="#" class="contacts__form-body">
+                            <div class="contacts__input">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" name="name" id="name" placeholder="Андрей" required>
+                            </div>
+                            <div class="contacts__input">
+                                <label for="email">Ваша почта</label>
+                                <input type="email" name="email" id="email" placeholder="example@mail.com" required>
+                            </div>
+                            <div class="contacts__textarea">
+                                <label for="text">Ваше сообщение</label>
+                                <textarea name="text" id="text"></textarea>
+                            </div>
+                            <div class="contacts__controls">
+                                <button type="submit" class="btn btn_shadow">Отправить сообщение</button>
+                                <div class="policy-wrapper">
+                                    <input type="checkbox" name="policy" id="policy" class="policy-item" required>
+                                    <label for="policy">Я согласен(а) с <a href="/policy.html" target="_blank">политикой
+                                            конфидециальности</a></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

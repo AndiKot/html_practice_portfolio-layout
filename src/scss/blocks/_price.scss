@@ -26,7 +26,6 @@
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(1, auto);
         justify-content: space-between;
-        // align-items: space-between;
         row-gap: 5px;
         &::before {
             content: "";
